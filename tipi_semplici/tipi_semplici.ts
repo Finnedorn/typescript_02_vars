@@ -23,4 +23,3 @@ console.log(typeof vero && falso);
 
 
 
-
