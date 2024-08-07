@@ -44,3 +44,6 @@ npx tsc demo.ts test.ts --target es6 --outFile script.js
 
 <!-- eseguire un file tramite node ovvero eseguire la logica js sul terminale di comando -->
 node script.js
+
+
+<!--  -->
