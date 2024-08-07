@@ -63,3 +63,49 @@ console.log(Automobile.state());
 
 //mi dara' true in quanto ad essa si applica automaticamente il valore statico
 console.log(fiat.usata);
+
+// ------------------------------------------------------------------------------
+
+
+// come in js cosi' in ts il concetto di ereditarieta' permane con le stesse identiche proprieta'
+class Veicoli {
+    public modello: string;
+    public marca: string;
+    public tipo: string;
+
+    private lunghezza: number;
+
+    constructor(modello: string, marca: string, tipo: string, lunghezza: number){
+        this.modello = modello;
+        this.marca = marca;
+        this.tipo = tipo;
+        this.lunghezza = lunghezza
+    }
+
+    get _lunghezza(){
+        return this.lunghezza;
+    }
+
+    set lunghezzaVeicolo(lungo: number){
+        this.lunghezza = lungo;
+    }
+
+    dettagli(): string{
+        return `veicolo`;
+    }
+}
+
+// cleo una classe che estenda il padre
+class Macchina extends Veicoli {
+    public colore: string;
+    // tramite super estendo le proprieta' del padre al figlio
+    constructor(modello: string, marca: string, tipo: string, lunghezza: number, colore: string,){
+        super(modello,marca, tipo, lunghezza);
+        this.colore = colore;
+    }
+}
+
+let ford = new Veicoli('fiesta', '345', 'berlina', 5);
+let macchina1 = new Macchina('bmw', '65', 'suv', 9, 'verde');
+// accedo dal figlio ai metodi del padre per ereditarieta'
+console.log(macchina1.dettagli());
