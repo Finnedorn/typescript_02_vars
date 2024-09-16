@@ -109,3 +109,5 @@ let ford = new Veicoli('fiesta', '345', 'berlina', 5);
 let macchina1 = new Macchina('bmw', '65', 'suv', 9, 'verde');
 // accedo dal figlio ai metodi del padre per ereditarieta'
 console.log(macchina1.dettagli());
+
+// https://sanmarinogames.notion.site/Novomatic-Shared-6bb79fc6c9fb485e95ebe56a64c26f7f
